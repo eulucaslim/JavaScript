@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual seu País?</title>
+</head>
+<body>
+    <h1>Qual é o seu País?</h1>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Confirmar" onclick="entrar()">
+    <div id="res"></div>
+    <script>
+        function entrar(){
+        var pais = window.document.getElementById('txtpais')
+        var res = window.document.querySelector('div#res')
+        var txtp = String(txtpais.value)
+        if (txtp == 'Brasil') {
+            res.innerHTML += `<p>Você é <strong>Brasileiro!!!</strong></p>`
+        } else {
+            res.innerHTML += `<p>Você é <strong>Estrangueiro!!!</strong></p>`
+        }
+    }
+    </script>
+</body>
+</html>
